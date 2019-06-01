@@ -1,36 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Word Guess</title>
+    <meta charset="utf-8" />
+    <title>Legend of Zelda Word Guess!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
+
   <body>
     <script type="text/javascript">
-      // my variables and arrays will go here first
-      var zeldaWords = [
-        "ocarina",
-        "triforce",
-        "rupee",
-        "moblin",
-        "leviathan",
-        "hyrule"
-      ];
 
-      var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+          <h1>Link! You must defend Hyrule and defeat Ganon!</h1>
+          <h2>Build your Repertoire of weapons!</h2>
 
-        //here will be our random picker
-        var randomZelda = zeldaWords(Math.floor(Math.random() * zeldaWords.length));
-      var answerZelda = [];
-      var wins = 0;
-      var losses = 0;
-      //here we will add a for loop
-      function (event) {
+        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
-        for(var i = 0; i < randomZelda.length; i++) {
-            answerZelda[i] = "_";
-      }
+        var zeldaWords = [
+          "the master sword",
+          "lightscale trident",
+          "great eagle bow",
+          "boulder breaker",
+          "scimitar of seven",
+          "hylian shield"
+        ];
+          //here will be our random picker
+          for (var i = 0; i < zeldaWords.length; i++) {
+          var randomZelda = zeldaWords(Math.floor(Math.random() * zeldaWords.length));
+          };
+        var answerZelda = [];
+        var wins = 0;
+        var losses = 0;
+
+      <div class="background">
+          <div class="container">
+
+              <h2>Click any Letter to Start!</h2>
+
+              <div>
+                  <h3 id="currentword">_ _ _ _ _</h3>
+              </div>
+              <div id="scoreboard">
+
+                  <div class="sidebar">
+                      <h3> Attacks Left :
+                              <span id="guessesremaining"></span>
+                          </h3>
+                  </div>
+
+                  <div class="sidebar">
+                      <h3> Wow! The heart of a true hero! wins:
+                              <span id="winstracker"></span>
+                          </h3>
+                  </div>
+
+                  <div class="sidebar">
+                      <h3> Game Over! losses:
+                              <span id="losstracker"></span>
+                          </h3>
+                  </div>
+
+                  <div class="sidebar">
+                      <h3>Only a small scratch! Try a different letter!
+                              <span id="playerguesses"></span>
+                          </h3>
+                  </div>
+              </div>
+          </div>
+      </div>
     </script>
   </body>
 </html>
